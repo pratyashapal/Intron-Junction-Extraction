@@ -5,18 +5,20 @@ Extract Split Reads: Detects split reads from SAM files using CIGAR strings.
 Junction Counting: For each unique intron-exon junction, counts the supporting reads.
 Gene Boundary Mapping: Matches junctions to genes based on given genomic coordinates.
 Customizable Input: Accepts any SAM file and gene summary file as input.
-Input Files
-SAM File: Contains RNA-seq alignments. Key columns used:
 
+Input Files
+
+1. SAM File: Contains RNA-seq alignments. 
+Key columns used:
 Chromosome name (RNAME)
 Alignment start position (POS)
 CIGAR string for alignment description (CIGAR)
-Read alignment count (NH:i
-)
-Gene Summary File: Tab-separated file with:
+Read alignment count (NH:i)
 
+2. Gene Summary File: Tab-separated file with:
 Gene ID
 Transcript ID
 Gene location in the format: Chromosome:start..end(strand)
+
 Output
 The script generates a tab-separated output file listing gene IDs, intron junctions (start/end positions), and the number of supporting reads for each junction.
